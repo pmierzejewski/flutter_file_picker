@@ -54,9 +54,13 @@
 
 - (void)handleMethodCall:(FlutterMethodCall*)call result:(FlutterResult)result {
     if (_result) {
+        [self.viewController dismissViewControllerAnimated:YES completion:nil];
+        self->_result(nil);
+        self->_result = nil;
         result([FlutterError errorWithCode:@"multiple_request"
                                     message:@"Cancelled by a second request"
                                     details:nil]);
+
         _result = nil;
         return;
     }
@@ -66,6 +70,13 @@
     if([call.method isEqualToString:@"clear"]) {
         _result([NSNumber numberWithBool: [FileUtils clearTemporaryFiles]]);
         _result = nil;
+        return;
+    }
+
+    if([call.method isEqualToString:@"dismissPicker"]) {
+        [self.viewController dismissViewControllerAnimated:YES completion:nil];
+        self->_result(nil);
+        self->_result = nil;
         return;
     }
     

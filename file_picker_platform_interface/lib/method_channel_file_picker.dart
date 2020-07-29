@@ -43,6 +43,11 @@ class MethodChannelFilePicker extends FilePickerPlatform {
     }
   }
 
+  @override
+  Future<void> dismissPicker() async {
+    return _channel.invokeMethod('dismissPicker');
+  }
+
   Future<dynamic> _getPath(
     FileType fileType,
     bool allowMultipleSelection,

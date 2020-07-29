@@ -7,11 +7,15 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_plugin_android_lifecycle: ^1.0.6
-  file_picker_platform_interface: ^1.3.1
+  file_picker_platform_interface:
+    git:
+      url: https://github.com/pmierzejewski/flutter_file_picker.git
+      path: file_picker_platform_interface
+      ref: 891a583ffa92347f6c7d6e6adbc696b6ed626992
 
 environment:
-  sdk: ">=2.0.0 <3.0.0"
-  flutter: ">=1.10.0 <2.0.0"
+  sdk: '>=2.0.0 <3.0.0'
+  flutter: '>=1.10.0 <2.0.0'
 
 flutter:
   plugin:

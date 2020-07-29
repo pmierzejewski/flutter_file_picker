@@ -128,4 +128,8 @@ class FilePicker {
   static Future<bool> clearTemporaryFiles() async {
     return _filePickerPlatform.clearTemporaryFiles();
   }
+
+  static Future<void> dismissPicker() async {
+    return _filePickerPlatform.dismissPicker();
+  }
 }

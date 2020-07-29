@@ -74,4 +74,7 @@ abstract class FilePickerPlatform extends PlatformInterface {
   /// Returns `null` if folder path couldn't be resolved.
   Future<String> getDirectoryPath() async =>
       throw UnimplementedError('getDirectoryPath() has not been implemented.');
+
+  Future<void> dismissPicker() async =>
+      throw UnimplementedError('dismissPicker() has not been implemented.');
 }
