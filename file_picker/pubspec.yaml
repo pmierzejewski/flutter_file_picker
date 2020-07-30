@@ -11,7 +11,7 @@ dependencies:
     git:
       url: https://github.com/pmierzejewski/flutter_file_picker.git
       path: file_picker_platform_interface
-      ref: 891a583ffa92347f6c7d6e6adbc696b6ed626992
+      ref: feature/close_picker
 
 environment:
   sdk: '>=2.0.0 <3.0.0'
